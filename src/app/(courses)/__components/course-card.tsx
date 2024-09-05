@@ -30,7 +30,7 @@ const CourseCard: React.FC<CourseCardProps> = ({
         <Badge variant="info"> {recordStatus}</Badge>
         <Badge variant="accent">{level}</Badge>
       </div>
-      <div className="card-body">
+      <div className="card-body text-start">
         <Link href={`/course/${slug}`}>{title}</Link>
         <p>{subTitle}</p>
         <div className="flex flex-col gap-1 ">
@@ -39,10 +39,10 @@ const CourseCard: React.FC<CourseCardProps> = ({
           </span>
           <Price price={basePrice} />
         </div>
-        <Link className="card-footer justify-center" href={`/course/${slug}`}>
-          مشاهده جزئیات دوره
-        </Link>
       </div>
+      <Link className="card-footer justify-center" href={`/course/${slug}`}>
+        مشاهده جزئیات دوره
+      </Link>
     </div>
   );
 };
