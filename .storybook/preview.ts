@@ -8,6 +8,13 @@ const preview: Preview = {
         date: /Date$/i,
       },
     },
+    playground: {
+      storyId: "playground",
+      // components: { ...MyComponentsLibrary, ...MyIconsLibrary },
+      // autocompletions: generateAutocompletions(reactDocgenOutput),
+      // editorTheme: "dark",
+      // introCode: { jsx: `<div>Welcome to my Playground!</div>`, css: "" },
+    },
   },
 };
 
