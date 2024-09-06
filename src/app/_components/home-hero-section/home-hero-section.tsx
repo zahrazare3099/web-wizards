@@ -1,5 +1,7 @@
+"use client";
 import Image from "next/image";
 import { Button } from "../button";
+import { IconArrowLeftFill } from "../icons/icons";
 
 export const HomeHeroSection = () => {
   return (
@@ -16,11 +18,12 @@ export const HomeHeroSection = () => {
             هر جای مسیر برنامه نویسی که باشی، با همراهی استاد های با تجربه ما می
             تونی بدون محدودیت به قله های بالاتر صعود کنی، ما همیشه هواتو داریم.
           </p>
-          <div className="flex gap-4 py-4 justify-center lg:justify-normal">
-            <Button variant="primary" size="large" isOutline={true}>
+          <div className="flex gap-4 py-4 justify-center lg:justify-start">
+            <Button variant="primary" size="large" className="animated-icon">
               مشاهده دوره ها
+              <IconArrowLeftFill fill="currentColor" />
             </Button>
-            <Button variant="accent" size="large" isOutline={true}>
+            <Button variant="neutral" size="large">
               مشاوره برنامه نویسی
             </Button>
           </div>
