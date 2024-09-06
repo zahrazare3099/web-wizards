@@ -1,5 +1,5 @@
 .card {
-  @apply relative flex flex-col rounded-lg dark:bg-base-50 w-80 overflow-hidden;
+  @apply relative flex flex-col rounded-lg dark:bg-base-50 w-80 md:w-72 overflow-hidden;
 
   &-body {
     @apply p-3 flex flex-col flex-auto gap-2 text-sm font-semibold leading-6;

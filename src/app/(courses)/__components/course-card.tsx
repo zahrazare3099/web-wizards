@@ -1,4 +1,6 @@
+"use client";
 import { Badge } from "@/app/_components/badge";
+import { IconArrowLeftFill, IconClock } from "@/app/_components/icons/icons";
 import Price from "@/app/_components/price/price";
 import { CourseSummary } from "@/types/course-summery.interface";
 import Image from "next/image";
@@ -33,15 +35,20 @@ const CourseCard: React.FC<CourseCardProps> = ({
       <div className="card-body text-start">
         <Link href={`/course/${slug}`}>{title}</Link>
         <p>{subTitle}</p>
-        <div className="flex flex-col gap-1 ">
-          <span className="flex">
-            <Badge variant="warning">{duration}</Badge>
-          </span>
-          <Price price={basePrice} />
+        <div className="flex items-center justify-between pt-3">
+          <Badge variant="warning">
+            <IconClock width={16} height={16} />
+            {duration}
+          </Badge>
+          <Price price={basePrice} size="small" />
         </div>
       </div>
-      <Link className="card-footer justify-center" href={`/course/${slug}`}>
+      <Link
+        className="card-footer justify-center animated-icon"
+        href={`/course/${slug}`}
+      >
         مشاهده جزئیات دوره
+        <IconArrowLeftFill fill="currentColor" />
       </Link>
     </div>
   );
