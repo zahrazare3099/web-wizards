@@ -1,7 +1,7 @@
 import {
   HomeExperienceSection,
   HomeFeaturesSection,
-  HomeFifthSection,
+  HomeNewestBlogPostSection,
   HomeFourthSection,
   HomeHeroSection,
   HomeNewestCourseSection,
@@ -14,7 +14,7 @@ export default async function Home() {
       <HomeFeaturesSection />
       <HomeNewestCourseSection />
       <HomeFourthSection />
-      <HomeFifthSection />
+      <HomeNewestBlogPostSection />
       <HomeExperienceSection />
     </>
   );
