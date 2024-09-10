@@ -16,5 +16,5 @@ export const Badge: React.FC<BadgeProps> = (props) => {
     { [`badge-${variant}`]: variant },
     { [sizeClasses[size]]: size }
   );
-  return <div className={`badge ${classes}`}>{children}</div>;
+  return <div className={`badge ${classes} flex items-center`}>{children}</div>;
 };

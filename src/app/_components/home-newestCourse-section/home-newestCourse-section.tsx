@@ -1,11 +1,11 @@
 import { CourseCardList } from "@/app/(courses)/__components/course-card-list";
+import { API_URL } from "@/config/global";
 
 // fetch Courses summery
 async function getNewestCourses(count: number) {
-  const res = await fetch(
-    `https://api.classbon.com/api/courses/newest/${count}`,
-    { next: { revalidate: 24 * 3600 } }
-  );
+  const res = await fetch(`${API_URL}/courses/newest/${count}`, {
+    next: { revalidate: 24 * 3600 },
+  });
   return res.json();
 }
 
