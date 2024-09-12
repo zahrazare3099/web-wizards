@@ -59,11 +59,11 @@ export default function RootLayout({
   return (
     <html
       dir="rtl"
-      className={`${yekanbakh.variable} ${figtree.variable} dark px-4`}
+      className={`${yekanbakh.variable} ${figtree.variable} dark `}
     >
       <body className="min-h-screen grid grid-rows-[80px_1fr_auto] dark:bg-base-100 dark:text-base-content">
         <Header />
-        <main className="px-5">{children}</main>
+        <main className="px-8">{children}</main>
         <Footer />
       </body>
     </html>
