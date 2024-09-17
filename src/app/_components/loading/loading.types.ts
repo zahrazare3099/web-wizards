@@ -1,5 +1,5 @@
-import { componentBase } from "../types/component-base-type";
+import { ComponentBase } from "../types/component-base.type";
 
-export type LoadingProps = Omit<componentBase, "isDisable"> & {
+export type LoadingProps = Omit<ComponentBase, "isDisable"> & {
   type?: "spinner" | "ring";
 };

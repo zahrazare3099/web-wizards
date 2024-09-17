@@ -1,5 +1,5 @@
 import { CourseCardList } from "@/app/(courses)/__components/course-card-list";
-import { API_URL } from "@/config/global";
+import { API_URL } from "@/configs/global";
 
 // fetch Courses summery
 async function getNewestCourses(count: number) {

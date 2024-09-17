@@ -1,7 +1,7 @@
 import { Badge } from "../badge";
 import { IconToman } from "../icons/icons";
 import { PriceType } from "./price.types";
-import { Size } from "../types/Size.type";
+import { Size } from "../types/size.type";
 
 const sizeClasses: Record<Size, { textSize: string; svgSize: number }> = {
   tiny: { textSize: "text-base", svgSize: 16 },
@@ -10,7 +10,7 @@ const sizeClasses: Record<Size, { textSize: string; svgSize: number }> = {
   large: { textSize: "text-2xl", svgSize: 22 },
 };
 
-const Price: React.FC<PriceType> = (props) => {
+export const Price: React.FC<PriceType> = (props) => {
   const { size = "normal", text = "رایگان", price, className } = props;
   const svgSize = sizeClasses[size].svgSize;
   return (
@@ -35,5 +35,3 @@ const Price: React.FC<PriceType> = (props) => {
     </>
   );
 };
-
-export default Price;

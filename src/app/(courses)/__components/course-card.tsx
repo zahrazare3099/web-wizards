@@ -1,7 +1,7 @@
 "use client";
 import { Badge } from "@/app/_components/badge";
 import { IconArrowLeftFill, IconClock } from "@/app/_components/icons/icons";
-import Price from "@/app/_components/price/price";
+import { Price } from "@/app/_components/price";
 import { CourseSummary } from "@/types/course-summery.interface";
 import Image from "next/image";
 import Link from "next/link";
@@ -45,7 +45,7 @@ const CourseCard: React.FC<CourseCardProps> = ({
       </div>
       <Link
         className="card-footer justify-center animated-icon"
-        href={`/course/${slug}`}
+        href={`/courses/${slug}`}
       >
         مشاهده جزئیات دوره
         <IconArrowLeftFill fill="currentColor" />

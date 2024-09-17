@@ -1,6 +1,6 @@
 import classNames from "classnames";
 import { LoadingProps } from "./loading.types";
-import { Size } from "../types/Size.type";
+import { Size } from "../types/size.type";
 
 const sizeClasses: Record<Size, string> = {
   tiny: "loading-xs",

@@ -2,7 +2,7 @@ import React from "react";
 // import { CourseSummary } from "@/types/course-summary.interface";
 import { BlogPostCard } from "./blog-post-card";
 import { BlogPostSummary } from "@/types/blog-post-summary.interface";
-import { API_URL } from "@/config/global";
+import { API_URL } from "@/configs/global";
 
 type BlogPostCardListProps = {
   posts: BlogPostSummary[];
