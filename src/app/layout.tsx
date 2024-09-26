@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { Header } from "./_components/header";
 import { Footer } from "./_components/footer";
 import "./globals.css";
+import QueryProvider from "@/providers/react-query-provider";
 
 export const metadata: Metadata = {
   title: "WebWizards",
@@ -62,9 +63,11 @@ export default function RootLayout({
       className={`${yekanbakh.variable} ${figtree.variable} dark `}
     >
       <body className="min-h-screen grid grid-rows-[80px_1fr_auto] dark:bg-base-100 dark:text-base-content">
-        <Header />
-        <main className="px-8">{children}</main>
-        <Footer />
+        <QueryProvider>
+          <Header />
+          <main className="px-8">{children}</main>
+          <Footer />
+        </QueryProvider>
       </body>
     </html>
   );
