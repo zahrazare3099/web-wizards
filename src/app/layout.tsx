@@ -5,6 +5,7 @@ import { Header } from "./_components/header";
 import { Footer } from "./_components/footer";
 import "./globals.css";
 import QueryProvider from "@/providers/react-query-provider";
+import NextTopLoader from "nextjs-toploader";
 
 export const metadata: Metadata = {
   title: "WebWizards",
@@ -63,6 +64,7 @@ export default function RootLayout({
       className={`${yekanbakh.variable} ${figtree.variable} dark `}
     >
       <body className="min-h-screen grid grid-rows-[80px_1fr_auto] dark:bg-base-100 dark:text-base-content">
+        <NextTopLoader showSpinner={false} color="var(--color-primary)" />
         <QueryProvider>
           <Header />
           <main className="px-8">{children}</main>

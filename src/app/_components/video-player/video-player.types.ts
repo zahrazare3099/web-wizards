@@ -1,5 +1,5 @@
 export type VideoProps = {
-    src: string;
-    poster?: string;
-    className?: string;
-}
+  src: string;
+  poster?: string;
+  className?: string;
+};
