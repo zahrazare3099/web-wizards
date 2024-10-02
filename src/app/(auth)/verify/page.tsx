@@ -1,5 +1,9 @@
-const Verify = () => {
-  return <div>verify</div>;
-};
+import Link from "next/link";
 
-export default Verify;
+export default function Verify() {
+  return (
+    <div className="">
+      <Link href="/signin">Go To Signin Page</Link>
+    </div>
+  );
+}
