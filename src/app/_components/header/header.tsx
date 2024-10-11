@@ -1,5 +1,6 @@
 import Image from "next/image";
 import TopNavigation from "./TopNavigation";
+import Link from "next/link";
 
 export const Header = () => {
   return (
@@ -12,7 +13,9 @@ export const Header = () => {
           alt="logo"
         />
         <TopNavigation />
-        <span className="flex flex-1 flex-row-reverse">auth</span>
+        <Link className="flex flex-1 flex-row-reverse" href={"/signin"}>
+          auth
+        </Link>
       </div>
     </header>
   );

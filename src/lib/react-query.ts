@@ -1,7 +1,7 @@
 import { Problem } from "@/types/http-errors.interface";
 import { MutationCache, QueryCache, QueryClient } from "@tanstack/react-query";
 import { Notification } from "@/types/notification.interface";
-// import { showNotification } from "@/stores/notification.store";
+import { showNotification } from "@/stores/notification.store";
 
 export const queryClient = new QueryClient({
   queryCache: new QueryCache({
@@ -11,7 +11,7 @@ export const queryClient = new QueryClient({
   }),
   mutationCache: new MutationCache({
     onError: (error: unknown) => {
-      //   showNotifications(error as Problem);
+      showNotifications(error as Problem);
     },
   }),
 
@@ -43,5 +43,5 @@ const showNotifications = (problem: Problem) => {
     });
   }
 
-  //   showNotification(notifications);
+  showNotification(notifications);
 };

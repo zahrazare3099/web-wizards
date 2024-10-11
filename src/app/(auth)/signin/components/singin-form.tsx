@@ -8,6 +8,7 @@ import { TextInput } from "@/app/_components/form-input";
 import { useSignIn } from "../_api/signin";
 import { useRouter } from "next/navigation";
 import { useNotificationStore } from "../../../../stores/notification.store";
+import React from "react";
 
 const SignInForm = () => {
   const {
@@ -45,6 +46,7 @@ const SignInForm = () => {
         className="flex flex-col gap-6 mt-16"
         onSubmit={handleSubmit(onSubmit)}
       >
+        <label htmlFor="mobile">شماره موبایل خود را وارد نمایید</label>
         <TextInput<SignIn>
           register={register}
           name={"mobile"}
@@ -60,6 +62,7 @@ const SignInForm = () => {
             },
           }}
           errors={errors}
+          placeholder="09217778899"
         />
 
         <Button type="submit" variant="primary" isLoading={signIn.isPending}>
